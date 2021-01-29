@@ -31,31 +31,46 @@
           <div class="notification height-90">
 
           </div>
-          <div class="search-container">
-            <input class="search" type="text" name="" value="">
-          </div>
-          <div class="contacts height-calc-90">
-            <div  v-for='(element, index) in contacts'  class="contact height-90  flex flex-align">
-              <img :src="element.avatar" alt="">
-              <div class="user-name">{{element.name}} {{index}}</div>
+          <div class="list-container height-calc-90">
+
+
+            <div class="search-container">
+              <input class="search" type="text" name="" value="">
+            </div>
+            <div class="contacts height-calc-60">
+              <div  v-for='element in contacts'  class="contact height-90  flex flex-align">
+                <img :src="element.avatar" alt="">
+                <div class="user-name">{{element.name}}</div>
+              </div>
             </div>
           </div>
-
         </div>
 
       </div>
-      <div class="master flex  flex-end-col">
+      <div class="master flex flex-end-col">
         <div class="main height-calc-90">
-          <div class="main-bar height-90">
-
+          <div class="main-bar height-90 flex flex-between">
+            <div class="selected-contact flex flex-center">
+              <img :src="contacts[0].avatar" alt="">
+              <div class="user-name">{{contacts[0].name}} <br>
+                <span>Ultimo accesso oggi alle</span>
+              </div>
+            </div>
+            <div class="icons-container flex flex-center">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <i class="fa fa-paperclip" aria-hidden="true"></i>
+              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </div>
           </div>
           <div class="main-content height-calc-90">
 
           </div>
 
         </div>
-        <div class="bottom-bar height-90">
-
+        <div class="bottom-bar height-90 flex flex-center">
+          <i class="fa fa-smile-o" aria-hidden="true"></i>
+          <textarea name="name" rows="4" cols="90"></textarea>
+          <i class="fa fa-microphone" aria-hidden="true"></i>
         </div>
       </div>
     </div>

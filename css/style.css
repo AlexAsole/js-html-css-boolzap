@@ -29,6 +29,10 @@
   width: 100%;
   height: calc(100% - 90px)
 }
+.height-calc-60{
+  width: 100%;
+  height: calc(100% - 60px);
+}
 img{
   width: 60px;
   height: 60px;
@@ -51,12 +55,13 @@ img{
   height: 100%;
   overflow: hidden;
 }
-.sideup{
+.sideup,.main-bar{
   background: #eaeaea;
   padding-left: 15px;
 }
-.icons-container > i {
+.icons-container > i, .bottom-bar > i {
   padding-right: 15px;
+  padding-left: 15px;
   font-size: 26px;
   color: #b1b1b1;
 }
@@ -75,9 +80,13 @@ img{
   height: 22px;
   margin: 15px 10px;
 }
+.contacts{
+  overflow-y: scroll;
+}
 .contact{
   background:#fff;
   padding: 15px;
+  border-bottom: 1px solid #ccc;
 }
 .master{
   width: calc(100% - 35%);
@@ -85,13 +94,16 @@ img{
   position: relative;
   background: #ccc;
   overflow: hidden;
+  border-left: 1px solid #00f;
 }
-.main-bar{
-  background: #ff0;
+.user-name > span {
+  font-size: 12px;
+  color: #7a7571;
 }
 .main-content{
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
 .bottom-bar{
-  background: #0f0;
+  background: #f3eeea;
 }
