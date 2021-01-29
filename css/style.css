@@ -1,3 +1,4 @@
+/* UTILITIES */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -6,32 +7,56 @@
 .flex {
   display: flex;
 }
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+.flex-end{
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.height-90{
+  width: 100%;
+  height: 90px;
+}
+.height-calc-90{
+  width: 100%;
+  height: calc(100% - 90px)
+}
+/* ELEMENTS */
+#root{
+  width: 100vw;
+  height: 100vh;
+}
 .container{
-  width: 80vw;
+  width: 80%;
   min-width: 950px;
-  height: calc(100vh - 50px);
-  margin: 25px auto;
+  height: calc(100% - 40px);
 }
 .sidebar {
   width: 35%;
   height: 100%;
-  background: #f00;
+  overflow: hidden;
+}
+.sideup{
+  background: #0ff;
+}
+.sidedown{
+  background: #6600cc;
 }
 .master{
   width: calc(100% - 35%);
   height: 100%;
   position: relative;
   background: #ccc;
+  overflow: hidden;
 }
-.main{
-  width: 100%;
-  height: calc(100% - 90px);
-  background: #00f;
+.main-bar{
+  background: #ff0;
+}
+.main-content{
+  background: #f0f;
 }
 .bottom-bar{
-  width: 100%;
-  height: 90px;
   background: #0f0;
-  position: absolute;
-  bottom: 0;
 }
