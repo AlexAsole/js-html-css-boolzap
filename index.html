@@ -31,14 +31,14 @@
           <div class="notification height-90">
 
           </div>
-          <input class="search" type="text" name="" value="">
-          <div v-for='element in contacts' class="contacts height-calc-90">
-            <div class="contact height-90  flex flex-align">
+          <div class="search-container">
+            <input class="search" type="text" name="" value="">
+          </div>
+          <div class="contacts height-calc-90">
+            <div  v-for='(element, index) in contacts'  class="contact height-90  flex flex-align">
               <img :src="element.avatar" alt="">
-              <div class="user-name">{{element.name}}</div>
+              <div class="user-name">{{element.name}} {{index}}</div>
             </div>
-
-
           </div>
 
         </div>
