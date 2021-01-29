@@ -11,7 +11,10 @@
   justify-content: center;
   align-items: center;
 }
-.flex-end{
+.flex-between {
+  justify-content: space-between;
+}
+.flex-end-col{
   flex-direction: column;
   justify-content: flex-end;
 }
@@ -23,15 +26,22 @@
   width: 100%;
   height: calc(100% - 90px)
 }
+img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 /* ELEMENTS */
 #root{
   width: 100vw;
   height: 100vh;
+  background: linear-gradient( #009788 20%, transparent 20%, transparent 20%,#dbdbd1 20%);
 }
 .container{
   width: 80%;
   min-width: 950px;
   height: calc(100% - 40px);
+  font-family: Roboto;
 }
 .sidebar {
   width: 35%;
@@ -39,10 +49,19 @@
   overflow: hidden;
 }
 .sideup{
-  background: #0ff;
+  background: #eaeaea;
+  padding-left: 15px;
+}
+.icons-container > i {
+  padding-right: 15px;
+  font-size: 26px;
+  color: #b1b1b1;
 }
 .sidedown{
   background: #6600cc;
+}
+.notification{
+  background: #8edafc;
 }
 .master{
   width: calc(100% - 35%);

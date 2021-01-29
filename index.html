@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>BoolzApp</title>
 </head>
@@ -10,15 +13,37 @@
   <div id="root" class="flex flex-center">
     <div class="container flex">
       <div class="sidebar">
-        <div class="sideup height-90">
+        <div class="sideup height-90 flex flex-between">
+          <div class="avatar-container flex flex-center">
+            <img :src="user.avatar" alt="">
+            <div class="user-name">{{user.name}}</div>
+          </div>
+          <div class="icons-container flex flex-center">
+            <i class="fa fa-circle-o-notch" aria-hidden="true"></i>
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </div>
+
 
         </div>
         <div class="sidedown height-calc-90">
 
+          <div class="notification height-90">
+
+          </div>
+          <div v-for='element in contacts' class="contacts height-calc-90">
+            <!-- <div class="contact height-90  flex flex-center"> -->
+              <img :src="element.avatar" alt="">
+              <div class="user-name">{{element.name}}</div>
+            <!-- </div> -->
+
+
+          </div>
+
         </div>
 
       </div>
-      <div class="master flex  flex-end">
+      <div class="master flex  flex-end-col">
         <div class="main height-calc-90">
           <div class="main-bar height-90">
 
