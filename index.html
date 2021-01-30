@@ -10,9 +10,13 @@
   <title>BoolzApp</title>
 </head>
 <body>
+  <!-- ROOT CONTAINER VUEJS -->
   <div id="root" class="flex flex-center">
+    <!-- CONTAINER CENTRALE -->
     <div class="container flex">
+      <!-- SIDEBAR -->
       <div class="sidebar">
+        <!-- SIDEBAR SUPERIORE -->
         <div class="sideup height-90 flex flex-between">
           <div class="avatar-container flex flex-center">
             <img :src="user.avatar" alt="">
@@ -23,19 +27,25 @@
             <i class="fa fa-comment-o" aria-hidden="true"></i>
             <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
           </div>
-
-
         </div>
+        <!-- END SIDEBAR SUPERIORE -->
+        <!-- SIDEBAR INFERIORE -->
         <div class="sidedown height-calc-90">
-
-          <div class="notification height-90">
-
+          <!-- NOTIFICHE -->
+          <div class="notification height-90 flex flex-center-v">
+            <div class="bell flex flex-center">
+              <i class="fa fa-bell-slash" aria-hidden="true"></i>
+            </div>
+            <div class="bell-text">
+              <div>Ricevi notifiche di nuovi messaggi</div>
+              <a href="#">Attiva notifiche Desktop</a>
+            </div>
           </div>
+          <!-- END NOTIFICHE -->
+          <!-- LISTA CONTATTI -->
           <div class="list-container height-calc-90">
-
-
             <div class="search-container">
-              <input class="search" type="text" name="" value="">
+              <input class="search" placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
             </div>
             <div class="contacts height-calc-60">
               <div  v-for='element in contacts'  class="contact height-90  flex flex-align">
@@ -44,11 +54,16 @@
               </div>
             </div>
           </div>
+          <!-- END LISTA CONTATTI -->
         </div>
-
+        <!-- END SIDEBAR INFERIORE -->
       </div>
+      <!-- END SIDEBAR -->
+      <!-- MASTER -->
       <div class="master flex flex-end-col">
+        <!-- MASTER CONTENT -->
         <div class="main height-calc-90">
+          <!-- BARRA CONTATTO -->
           <div class="main-bar height-90 flex flex-between">
             <div class="selected-contact flex flex-center">
               <img :src="contacts[0].avatar" alt="">
@@ -62,19 +77,32 @@
               <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
             </div>
           </div>
+          <!-- END BARRA CONTATTO -->
+          <!-- MAIN CONTENT -->
           <div class="main-content height-calc-90">
-
+            <div class="user-message">
+              Ciao
+            </div>
+            <div class="contact-message">
+              Ciao a te, caro
+            </div>
           </div>
-
+          <!-- END MAIN CONTENT -->
         </div>
+        <!-- END MASTER CONTENT -->
+        <!-- INPUT BAR -->
         <div class="bottom-bar height-90 flex flex-center">
           <i class="fa fa-smile-o" aria-hidden="true"></i>
           <textarea name="name" rows="4" cols="90"></textarea>
           <i class="fa fa-microphone" aria-hidden="true"></i>
         </div>
+        <!-- END INPUT BAR -->
       </div>
+      <!-- END MASTER -->
     </div>
+    <!-- END CONTAINER CENTRALE -->
   </div>
+  <!-- END ROOT CONTAINER VUEJS -->
   <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
