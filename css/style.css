@@ -105,7 +105,7 @@ img{
   margin: 15px 10px;
 }
 .contacts{
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .contact{
   background:#fff;
@@ -129,7 +129,7 @@ img{
 }
 .main-content{
   background-image: url(../img/mine.jpg);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .user-message {
   position: relative;
@@ -177,4 +177,8 @@ img{
 }
 .bottom-bar{
   background: #f3eeea;
+}
+.input-message {
+  width: 75%;
+  height: 50px;
 }
