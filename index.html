@@ -48,7 +48,7 @@
               <input class="search" placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
             </div>
             <div class="contacts height-calc-60">
-              <div  v-for='element in contacts'  class="contact height-90  flex flex-align">
+              <div  v-for='(element,index) in contacts'  class="contact height-90  flex flex-align" @click='changeContact(index)'>
                 <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                 <div class="user-name">{{element.name}}</div>
               </div>
@@ -66,8 +66,8 @@
           <!-- BARRA CONTATTO -->
           <div class="main-bar height-90 flex flex-between">
             <div class="selected-contact flex flex-center">
-              <img :src="'img/avatar' + contacts[0].avatar + '.jpg'" alt="">
-              <div class="user-name">{{contacts[0].name}} <br>
+              <img :src="'img/avatar' + contacts[selectedContact].avatar + '.jpg'" alt="">
+              <div class="user-name">{{contacts[selectedContact].name}} <br>
                 <span>Ultimo accesso oggi alle</span>
               </div>
             </div>
@@ -80,7 +80,7 @@
           <!-- END BARRA CONTATTO -->
           <!-- MAIN CONTENT -->
           <div class="main-content height-calc-90">
-            <div v-for='element in contacts[0].messages' :class="typeMessage(element)">
+            <div v-for='element in contacts[selectedContact].messages' :class="typeMessage(element)">
               {{element.text}}
             </div>
             <!-- <div class="user-message">
