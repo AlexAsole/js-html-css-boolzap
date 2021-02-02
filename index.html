@@ -80,7 +80,7 @@
           <!-- END BARRA CONTATTO -->
           <!-- MAIN CONTENT -->
           <div class="main-content height-calc-90">
-            <div v-for='element in contacts[0].messages' :class="{element.status === sent ? user-contact : contact-message}">
+            <div v-for='element in contacts[0].messages' :class="typeMessage(element)">
               {{element.text}}
             </div>
             <!-- <div class="user-message">

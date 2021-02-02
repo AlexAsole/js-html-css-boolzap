@@ -132,6 +132,7 @@ img{
   overflow-y: auto;
 }
 .user-message {
+  margin: 15px 0;
   position: relative;
   background: #dcf8c6;
   max-width: 250px;
@@ -139,7 +140,6 @@ img{
   border-radius: 10px;
   padding: 15px;
   left: 500px;
-  top: 400px
 }
 .user-message:after {
   content: '';
@@ -154,14 +154,14 @@ img{
   margin-top: -10px;
 }
 .contact-message {
+  margin: 15px 0;
   position: relative;
   background: #ffffff;
   max-width: 250px;
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
-  left: 35px;
-  top: 410px;
+  left: 40px;
 }
 .contact-message:after {
   content: '';
