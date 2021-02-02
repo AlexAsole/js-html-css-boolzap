@@ -80,7 +80,7 @@
           <!-- END BARRA CONTATTO -->
           <!-- MAIN CONTENT -->
           <div class="main-content height-calc-90">
-            <div v-for='element in contacts[selectedContact].messages' :class="typeMessage(element)">
+            <div v-for='element in contacts[selectedContact].messages' :class="element.status">
               {{element.text}}
               <div>{{element.date}}</div>
             </div>

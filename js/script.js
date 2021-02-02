@@ -96,13 +96,6 @@ new Vue({
     ]
   },
   methods:{
-    typeMessage: function(e) {
-      if(e.status === 'sent') {
-        return 'user-message'
-      } else if (e.status === 'received') {
-        return 'contact-message'
-      }
-    },
     changeContact: function(i) {
       this.selectedContact = i
     },

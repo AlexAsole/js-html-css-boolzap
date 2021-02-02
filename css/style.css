@@ -131,7 +131,7 @@ img{
   background-image: url(../img/mine.jpg);
   overflow-y: auto;
 }
-.user-message {
+.sent {
   margin: 15px 0;
   position: relative;
   background: #dcf8c6;
@@ -141,7 +141,7 @@ img{
   padding: 15px;
   left: 500px;
 }
-.user-message:after {
+.sent:after {
   content: '';
   position: absolute;
   display: block;
@@ -153,7 +153,7 @@ img{
   right: -25px;
   margin-top: -10px;
 }
-.contact-message {
+.received {
   margin: 15px 0;
   position: relative;
   background: #ffffff;
@@ -163,7 +163,7 @@ img{
   padding: 15px;
   left: 40px;
 }
-.contact-message:after {
+.received:after {
   content: '';
   position: absolute;
   display: block;
@@ -175,7 +175,7 @@ img{
   left: -30px;
   margin-top: -15px;
 }
-.user-message > div, .contact-message > div {
+.sent > div, .received > div {
   font-size: 10px;
   color: rgba(0,0,0,0.45);
   margin: 10px 0 0 120px;
