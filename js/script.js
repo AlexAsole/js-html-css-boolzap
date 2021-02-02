@@ -101,6 +101,7 @@ new Vue({
     },
     insertMessage: function() {
       this.contacts[this.selectedContact].messages.push({
+        date: this.tellTime(),
         text: this.user.newMessage,
         status: 'sent'
       })
@@ -109,9 +110,27 @@ new Vue({
     },
     receiveAnswer: function() {
       this.contacts[this.selectedContact].messages.push({
+        date: this.tellTime(),
         text: 'Ok',
         status: 'received'
       })
+    },
+    tellTime: function() {
+      let day = new Date().getDate();
+      let month = new Date().getMonth();
+      let year = new Date().getFullYear();
+      let hour = new Date().getHours();
+      let minute = new Date().getMinutes();
+      let second = new Date().getSeconds();
+      let time = `${day}/${month}/${year} ${hour}:${minute}:${second}`
+      return time
+    },
+    lastConnection: function(i) {
+      let lastIndex = this.contacts[i].messages.length - 1;
+      let last = this.contacts[i].messages[lastIndex]
+      if (last.status === 'received') {
+        return last.date
+      } 
     }
   }
 })

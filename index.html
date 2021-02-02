@@ -68,7 +68,7 @@
             <div class="selected-contact flex flex-center">
               <img :src="'img/avatar' + contacts[selectedContact].avatar + '.jpg'" alt="">
               <div class="user-name">{{contacts[selectedContact].name}} <br>
-                <span>Ultimo accesso oggi alle</span>
+                <span>Ultimo accesso {{lastConnection(selectedContact)}}</span>
               </div>
             </div>
             <div class="icons-container flex flex-center">
