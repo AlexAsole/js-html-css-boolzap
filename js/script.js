@@ -111,6 +111,14 @@ new Vue({
         text: this.user.newMessage,
         status: 'sent'
       })
+      setTimeout(this.receiveAnswer, 1000)
+      this.user.newMessage = ''
+    },
+    receiveAnswer: function() {
+      this.contacts[this.selectedContact].messages.push({
+        text: 'Ok',
+        status: 'received'
+      })
     }
   }
 })
