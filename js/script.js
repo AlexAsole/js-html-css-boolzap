@@ -6,7 +6,7 @@ new Vue({
       name: 'Alex Giorgio',
       avatar: '_io',
       visible: false,
-      messages: [],
+      newMessage: '',
     },
     selectedContact: 0,
     contacts: [
@@ -105,6 +105,12 @@ new Vue({
     },
     changeContact: function(i) {
       this.selectedContact = i
+    },
+    insertMessage: function() {
+      this.contacts[this.selectedContact].messages.push({
+        text: this.user.newMessage,
+        status: 'sent'
+      })
     }
   }
 })
