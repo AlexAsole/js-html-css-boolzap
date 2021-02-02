@@ -82,6 +82,7 @@
           <div class="main-content height-calc-90">
             <div v-for='element in contacts[selectedContact].messages' :class="typeMessage(element)">
               {{element.text}}
+              <div>{{element.date}}</div>
             </div>
           </div>
           <!-- END MAIN CONTENT -->

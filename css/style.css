@@ -175,6 +175,11 @@ img{
   left: -30px;
   margin-top: -15px;
 }
+.user-message > div, .contact-message > div {
+  font-size: 10px;
+  color: rgba(0,0,0,0.45);
+  margin: 10px 0 0 120px;
+}
 .bottom-bar{
   background: #f3eeea;
 }
