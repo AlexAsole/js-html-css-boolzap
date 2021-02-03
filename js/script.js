@@ -242,7 +242,7 @@ new Vue({
     filterContacts: function(e) {
       let searchName = this.searchContact.toLowerCase();
       let filterName = e.name.toLowerCase();
-      if (filterName.startsWith(searchName)){
+      if (filterName.includes(searchName)){
         return true
       }
     }
