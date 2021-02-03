@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -45,10 +46,10 @@
           <!-- LISTA CONTATTI -->
           <div class="list-container height-calc-90">
             <div class="search-container">
-              <input class="search" placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
+              <input class="search" v-model='searchContact' placeholder="Cerca o inizia una nuova chat" type="text" name="" value="">
             </div>
             <div class="contacts height-calc-60">
-              <div  v-for='(element,index) in contacts'  class="contact height-90  flex flex-align" @click='changeContact(index)'>
+              <div  v-for='(element,index) in contacts' v-if='filterContacts(element)'  class="contact height-90  flex flex-align" @click='changeContact(index)'>
                 <img :src="'img/avatar' + element.avatar + '.jpg'" alt="">
                 <div class="user-name">{{element.name}}</div>
               </div>
