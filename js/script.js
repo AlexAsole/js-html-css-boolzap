@@ -209,10 +209,10 @@ new Vue({
     ]
   },
   methods:{
-    changeContact: function(i) {
+    changeContact: function(i) { // selezione contatto con click
       this.selectedContact = i
     },
-    insertMessage: function() {
+    insertMessage: function() { //inserici nuovo messaggio con risposta automatica
       this.contacts[this.selectedContact].messages.push({
         date: this.tellTime(),
         text: this.user.newMessage,
@@ -221,32 +221,32 @@ new Vue({
       setTimeout(this.receiveAnswer, 1000)
       this.user.newMessage = ''
     },
-    receiveAnswer: function() {
+    receiveAnswer: function() { // risposta automatica di cui sopra
       this.contacts[this.selectedContact].messages.push({
         date: this.tellTime(),
         text: 'Ok',
         status: 'received'
       })
     },
-    tellTime: function() {
+    tellTime: function() { // calcolo data messaggio
       const date = dayjs().format('DD/MM/YYYY HH:mm:ss')
       return date
     },
-    lastConnection: function(i) {
+    lastConnection: function(i) { // ultima connessione
       let lastIndex = this.contacts[i].messages.length - 1;
-      let last = this.contacts[i].messages[lastIndex]
+      let last = this.contacts[i].messages[lastIndex];
       if (last.status === 'received') {
         return last.date
       }
     },
-    filterContacts: function(e) {
+    filterContacts: function(e) { // filtra contatti con input
       let searchName = this.searchContact.toLowerCase();
       let filterName = e.name.toLowerCase();
       if (filterName.includes(searchName)){
         return true
       }
     },
-    openMenu: function(e, i) {
+    openMenu: function(i) { // apri dropdown menu
       let menu = document.getElementsByClassName('message-menu')[i];
       if (menu.classList.contains('active') === false) {
         menu.classList.add('active')
@@ -254,7 +254,7 @@ new Vue({
         menu.classList.remove('active')
       }
     },
-    deleteMessage: function(i) {
+    deleteMessage: function(i) { // cancella messaggio
       let menu = document.getElementsByClassName('message-menu')[i];
       this.contacts[this.selectedContact].messages.splice(i,1)
       menu.classList.remove('active')

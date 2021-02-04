@@ -83,7 +83,7 @@
           <div class="main-content height-calc-90">
             <div v-for='(element, index) in contacts[selectedContact].messages' :class="element.status">
               {{element.text}}
-              <div class="btn-menu" @click="openMenu(element, index)">
+              <div class="btn-menu" @click="openMenu(index)">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
               </div>
               <div class="date">{{element.date}}</div>
