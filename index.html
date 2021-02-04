@@ -81,9 +81,15 @@
           <!-- END BARRA CONTATTO -->
           <!-- MAIN CONTENT -->
           <div class="main-content height-calc-90">
-            <div v-for='element in contacts[selectedContact].messages' :class="element.status">
+            <div v-for='(element, index) in contacts[selectedContact].messages' :class="element.status">
               {{element.text}}
-              <div>{{element.date}}</div>
+              <div class="btn-menu" @click="openMenu">
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </div>
+              <div class="date">{{element.date}}</div>
+              <div class="message-menu" :class="{active}">
+                <div @click="deleteMessage(index)">Delete Message</div>
+              </div>
             </div>
           </div>
           <!-- END MAIN CONTENT -->

@@ -9,6 +9,7 @@ new Vue({
     },
     selectedContact: 0,
     searchContact: '',
+    active: false,
     contacts: [
       {
         name: 'Michele',
@@ -245,6 +246,14 @@ new Vue({
       if (filterName.includes(searchName)){
         return true
       }
+    },
+    openMenu: function() {
+      if(this.active === false) {
+        return this.active = true
+      }
+    },
+    deleteMessage: function(i) {
+      this.contacts[this.selectedContact].messages.splice(i,1)
     }
   }
 })

@@ -135,11 +135,11 @@ img{
   margin: 15px 0;
   position: relative;
   background: #dcf8c6;
-  max-width: 250px;
+  max-width: 280px;
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
-  left: 500px;
+  left: 480px;
 }
 .sent:after {
   content: '';
@@ -157,7 +157,7 @@ img{
   margin: 15px 0;
   position: relative;
   background: #ffffff;
-  max-width: 250px;
+  max-width: 280px;
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
@@ -179,6 +179,46 @@ img{
   font-size: 10px;
   color: rgba(0,0,0,0.45);
   margin: 10px 0 0 120px;
+}
+.date {
+  margin-top: 10px;
+}
+.sent:hover > .btn-menu > i, .received:hover > .btn-menu > i {
+  display: inline-block;
+}
+.btn-menu > i {
+  display: none;
+  transform: translate(500%, -150%);
+  font-size: 22px;
+}
+.message-menu {
+  display: none;
+  margin: 5px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 2;
+}
+.message-menu.active {
+  display: inline-block;
+}
+.message-menu > div {
+  font-size: 15px;
+  margin: 5px;
+}
+.message-menu > div:hover {
+  background: #ccc;
+  color: #999;
+}
+.received > .message-menu {
+  transform: translate(-50%, -50%);
+  left: 60%;
+  top: 50%;
+}
+.sent > .message-menu {
+  transform: translate(-50%, -50%);
+  left: 45%;
+  top: 50%;
 }
 .bottom-bar{
   background: #f3eeea;
