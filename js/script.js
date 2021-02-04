@@ -9,7 +9,6 @@ new Vue({
     },
     selectedContact: 0,
     searchContact: '',
-    active: false,
     contacts: [
       {
         name: 'Michele',
@@ -247,13 +246,18 @@ new Vue({
         return true
       }
     },
-    openMenu: function() {
-      if(this.active === false) {
-        return this.active = true
+    openMenu: function(e, i) {
+      let menu = document.getElementsByClassName('message-menu')[i];
+      if (menu.classList.contains('active') === false) {
+        menu.classList.add('active')
+      } else {
+        menu.classList.remove('active')
       }
     },
     deleteMessage: function(i) {
+      let menu = document.getElementsByClassName('message-menu')[i];
       this.contacts[this.selectedContact].messages.splice(i,1)
+      menu.classList.remove('active')
     }
   }
 })

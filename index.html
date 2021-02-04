@@ -83,11 +83,11 @@
           <div class="main-content height-calc-90">
             <div v-for='(element, index) in contacts[selectedContact].messages' :class="element.status">
               {{element.text}}
-              <div class="btn-menu" @click="openMenu">
+              <div class="btn-menu" @click="openMenu(element, index)">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
               </div>
               <div class="date">{{element.date}}</div>
-              <div class="message-menu" :class="{active}">
+              <div class="message-menu">
                 <div @click="deleteMessage(index)">Delete Message</div>
               </div>
             </div>
